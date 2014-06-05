@@ -15,7 +15,7 @@ class Client
      */
     public function loadJpeg($imagePath)
     {
-        return new Image(imagecreatefromjpeg($imagePath));
+        return new Image(imagecreatefromstring(file_get_contents($imagePath)));
     }
 
     /**
